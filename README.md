@@ -272,4 +272,42 @@ Dans la fonction **initState()**
 
 ```
 
+## La notification Locale
+
+Pour cela, je vais créer une **_showNotification()** pour pouvoir la lier au floating button d'en bas
+
+```
+void _showNotification() {`
+
+  `setState(() {`
+
+   `_counter++;`
+
+  `});`
+
+  `flNotPlugin.show(`
+
+    `0,`
+
+    `'Teste de $_counter',`
+
+    `'Comment allez-vous ?',`
+
+    `NotificationDetails(`
+
+      `android: AndroidNotificationDetails(chanel.id, chanel.name,`
+
+        `channelDescription: chanel.description,`
+
+        `importance: Importance.high,`
+
+        `color: Colors.blue,`
+
+        `playSound: true,`
+
+        `icon: '@mipmap/ic_launcher')));`
+
+ `}
+```
+
 

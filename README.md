@@ -190,4 +190,86 @@ WidgetsFlutterBinding.ensureInitialized();
 }
 ```
 
+## Configuration de _MyHomePageState
+
+Dans la fonction **initState()**
+
+```
+`FirebaseMessaging.onMessage.listen((RemoteMessage message) {`
+
+   `try {`
+
+    `RemoteNotification? notification = message.notification;`
+
+    `AndroidNotification? android = message.notification!.android;`
+
+    `if (notification != null && android != null) {`
+
+     `flNotPlugin.show(`
+
+       `notification.hashCode,`
+
+       `notification.title,`
+
+       `notification.body,`
+
+       `NotificationDetails(`
+
+         `android: AndroidNotificationDetails(chanel.id, chanel.name,`
+
+           `channelDescription: chanel.description,`
+
+           `importance: Importance.high,`
+
+           `color: Colors.blue,`
+
+           `playSound: true,`
+
+           `icon: '@mipmap/ic_launcher')));`
+
+    `}`
+
+   `} on Exception catch (e) {}`
+
+  `});`
+
+  `FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {`
+
+   `RemoteNotification? notification = message.notification;`
+
+   `AndroidNotification? android = message.notification!.android;`
+
+   `if (notification != null && android != null) {`
+
+    `showAboutDialog(`
+
+      `context: context,`
+
+      `applicationName: notification.title,`
+
+      `applicationIcon: Icon(Icons.notification_add),`
+
+      `children: [`
+
+       `SingleChildScrollView(`
+
+        `child: Column(`
+
+         `crossAxisAlignment: CrossAxisAlignment.start,`
+
+         `children: [Text('${notification.body}')],`
+
+        `),`
+
+       `)`
+
+      `]);`
+
+   `}`
+
+  `});`
+
+
+```
+
 

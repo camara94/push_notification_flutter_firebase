@@ -165,6 +165,29 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:push_notification/config_messaging.dart';
 ```
 
+J'initialise Firebase messaging dans la fonction **main()**:
 
+```
+WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+
+  _firebaseMessaging.getToken().then((token) {
+    print('LABY DAMARO CAMARA');
+    `print(token);
+  });
+  //Notification
+  FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+
+  await flNotPlugin
+      .resolvePlatformSpecificImplementation<
+          `AndroidFlutterLocalNotificationsPlugin>()!
+      .createNotificationChannel(chanel);
+
+  await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+      `alert: true, badge: true, sound: true);
+  runApp(const MyApp());
+}
+```
 
 

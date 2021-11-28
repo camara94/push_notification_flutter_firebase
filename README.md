@@ -15,3 +15,20 @@ Dans ce tutoriel, nous allons réaliser une application mobile en flutter qui va
 
 * **package: ** com.stardevcgroup 
 * **nom du projet: ** push_notification
+
+## Les Dépendances Utilisées dans le Projet
+
+Pour ajouter des dépendance, on va le fichier **pubspec.yml** puis dans la section **dependencies**, on les ajoute.
+
+* *firebase_core: ^1.10.0*
+* *provider: ^6.0.1*
+
+* *font_awesome_flutter: ^9.0.0*
+
+* *fluttertoast: ^8.0.8*
+
+* *firebase_auth: ^3.2.0*
+
+* *firebase_messaging: ^11.1.0*
+
+* *flutter_local_notifications: ^9.1.4*

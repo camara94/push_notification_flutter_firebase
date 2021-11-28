@@ -149,4 +149,22 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 }`
 ```
 
+## Configuration de Main
+
+### Les import dans main
+
+```
+import 'package:flutter/material.dart';
+
+import 'package:firebase_messaging/firebase_messaging.dart';
+
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+import 'package:firebase_core/firebase_core.dart';
+
+import 'package:push_notification/config_messaging.dart';
+```
+
+
+
 

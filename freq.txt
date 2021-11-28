@@ -1,0 +1,40 @@
+Procédure Monotonie(T : Tab ; Var iplm, Lplm : Entier)
+Var
+i, j, L : Entier
+Début
+	Lplm<-- 1
+	iplm<-- 1
+	pour i de 1 à n  Faire
+		j<-- i + 1
+		TantQue (T[j] >= T[j-1]) Faire
+			j<-- j + 1
+		FinTantQue
+		L<-- j – i + 1
+		Si (L > Lplm) Alors
+			iplm<-- i
+			Lplm<-- L
+		FinSi
+		i <-- j
+	FinPour
+Fin
+
+
+function monotonie(T, iplm, Lplm) {
+	let i, j, L;
+	for(i=0; i < T.length; i++){
+        
+        j=i+1;
+		while( T[i] >= T[j-1] ) {
+			j = j + 1;
+		}
+
+		L = j - i + 1;
+
+		if( L > Lplm ) {
+			iplm = i;
+			Lplm = L
+		}
+	}
+	console.log(L);
+	console.log(Lplm)
+}

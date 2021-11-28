@@ -1,0 +1,11 @@
+keytool -list -v -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore
+
+Ce canal est utilisé pour la notification d'importance
+
+j=aabccdd 
+k=
+
+curl --location --request POST 'https://fcm.googleapis.com/fcm/send' \
+--header 'Authorization: key=AAAAoIkC--8:APA91bH4uU45TYVP2HzzWA-wLRbVGwSKxGHH1S5QBKCBctxUKnStKSVtG7NIyEuMgXn_Bx8MB2kMCCP__QCpGNooldp2PEObTfw68qyLqzWVEl3_qymuCFjYB9m3T17Yi09XoFJv7Lbc' \
+--header 'Content-Type: application/json' --data-raw '{"to" : "eQPW1XcjTP6YTXwaoK5uu5:APA91bHu5sTYfQge5BphFu0m8dpyvJvzqHP8gtl5x4qwz-mmKnFxP3RUQKtQzuHI-nzKVEjxGSYi46lQR4sj_MRNz8Sait9uplsWgPe7nOXicfwAC7G10ajhdcnNigWvv9wkUW4Adr8a", 
+"notification" : {"body" : "Je suis Laby Damaro CAMARA, le geek de tous les temps en Informatique","title": "Bonjour tout le monde"}}'
